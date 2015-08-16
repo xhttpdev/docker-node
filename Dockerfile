@@ -1,13 +1,12 @@
 FROM node:0.12.7
 
-ADD launch.sh /launch
-
 VOLUME [ "/app" ]
 
 WORKDIR /app
 
 ONBUILD ADD . /app
+ONBUILD RUN npm install
 
 EXPOSE 3000
 
-CMD [ "/launch" ]
+CMD [ "npm", "start" ]
