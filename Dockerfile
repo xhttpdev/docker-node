@@ -1,5 +1,7 @@
 FROM node:0.12.7
 
+ADD launch.sh /launch
+
 VOLUME [ "/app" ]
 
 WORKDIR /app
